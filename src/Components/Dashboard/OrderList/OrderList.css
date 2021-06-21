@@ -1,0 +1,16 @@
+.text-center.center {
+    margin: auto;
+}
+
+.card.mb-3.orderItems {
+    display: contents;
+
+}
+.row.g-0.border {
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-bottom: 4%;
+}
+.col-md-8.col-sm-6.col-6.mt-5 {
+    margin-left: 5%;
+}

@@ -1,0 +1,45 @@
+
+
+
+   @media only screen and (min-width: 768px) {
+    .orderItems{
+        height: 46%;
+    }
+    img.order-item {
+        width: 100%;
+        margin-top: 18.5%;
+    }
+  } 
+  @media only screen and (min-width: 992px) {
+    .orderItems{
+        height: 41%;
+    }
+    img.order-item {
+        width: 61%;
+        margin-top: 14.5%;
+    } 
+   } 
+  img.order-item {
+    width: 81%;
+    margin-top: 4.5%;
+}
+@media only screen and (min-width: 1200px) {
+    .orderItems{
+        height: 36%;
+    }
+    img.order-item {
+        width: 58%;
+        margin-top: 2.5%;
+    }
+    
+  } 
+
+@media only screen and (min-width: 1366px) {
+    .orderItems{
+        height: 40%;
+    }
+    img.order-item {
+        width: 58%;
+        margin-top: 2.5%;
+    }
+  }

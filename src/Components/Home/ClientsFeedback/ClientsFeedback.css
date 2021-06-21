@@ -1,0 +1,10 @@
+img.comment-img {
+    width: 108px;
+    height: 108px;
+}
+.round-img {
+    border-radius: 50%;
+    width: 70%;
+    margin-left: 13%;
+    margin-top: 12%;
+}

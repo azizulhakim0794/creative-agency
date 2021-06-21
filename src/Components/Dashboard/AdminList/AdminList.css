@@ -1,0 +1,11 @@
+nav.navbar.navbar-light.bg-light {
+  box-shadow: 3px 0px 5px 3px gainsboro;
+  border-radius: 7px;
+}
+.text-center.margin-0 {
+  margin-top: 20%;
+}
+nav.navbar.navbar-light.bg-light.m-2 {
+  position: inherit;
+
+}

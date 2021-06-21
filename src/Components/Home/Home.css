@@ -1,0 +1,23 @@
+.home-header-bg{
+width: 100%;
+background: #FBD062;
+}
+.main-588{
+    height: 593px;
+}
+.main-774{
+    height: 774px;
+}
+.main-bg{
+    background: #FBD062;
+}
+.main-text{
+    background: #fbd062
+}
+@media only screen and (max-width: 400px){
+.home-header-bg {
+    width: 100%;
+    background: #FBD062;
+    height: 646px;
+}
+}

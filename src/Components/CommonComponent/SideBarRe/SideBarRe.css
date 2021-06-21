@@ -1,0 +1,128 @@
+.navbarB {
+    background-color: rgb(224 224 224);
+    height: 56px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 226px;
+    color: black;
+    cursor: pointer;
+}
+/* .navbarB:hover{
+    background-color: #d4d2d2;
+} */
+  .w-99{
+    width: 99%;
+  }
+  .menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+  }
+  
+  .nav-menu {
+    background-color: #d4d2d2;
+    width: 240px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    color: black;
+    overflow: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 249, 249); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c0bfbf; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8b7b7; 
+  }
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+  }
+  
+  .nav-textB {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  .nav-textB a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+  .navbarB.bar-top {
+    position: fixed;
+}
+  .nav-textB a:hover {
+    background-color: rgb(224 224 224);
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+  }
+  svg.svgMr {
+    margin-bottom: 7px;
+    margin-left: -9px;
+}
+  .navbar-toggle {
+    background-color: #d4d2d2;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  span {
+    margin-left: 13px;
+  }
+  @media only screen and (max-width: 500px) {
+    .navbarB {
+      width: 80px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 1px grey;
+      margin-left: 1%;
+  }
+  .navbarB:active {
+    box-shadow: 1px 1px 5px 1px grey;
+  }
+  .w-99 {
+    width: 99%;
+}
+  }
+  @media only screen and (max-width: 767px) {
+  
+  }
+  @media only screen and (max-width: 10px) {
+    .w-99 {
+      width: 99%;
+  }
+  }
