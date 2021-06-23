@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../../CommonComponent/NavBar/NavBar';
+// import NavBar from '../NavBar/NavBar';
 import Header from './Header/Header';
 
 const HomeHeader = () => {

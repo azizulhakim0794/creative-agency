@@ -1,8 +1,9 @@
 import React from 'react';
-import NavBar from '../Home/NavBar/NavBar';
+// import NavBar from '../CommonComponent/NavBar/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComments, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import './ConnectUs.css'
+import NavBar from '../CommonComponent/NavBar/NavBar';
 
 const ConnectUs = () => {
     // const imgURL = 

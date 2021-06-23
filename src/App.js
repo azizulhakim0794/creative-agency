@@ -18,6 +18,7 @@ import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import NoMatch from './Components/NoMatch/NoMatch';
 import OurTeam from './Components/OurTeam/OurTeam';
 import ServicesSelect from './Components/ServicesSelect/ServicesSelect';
+import WebOverview from './Components/WebOverview/WebOverview';
 export const UserContext = createContext()
 export const Navigation = createContext()
 function App() {
@@ -92,6 +93,9 @@ const [nav , setNav] = useState({
           </Route>
           <Route path="/connectUs">
             <ConnectUs />
+          </Route>
+          <Route path="/webOverview">
+            <WebOverview />
           </Route>
           <Route path="*">
             <NoMatch />

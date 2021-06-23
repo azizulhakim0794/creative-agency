@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
-import NavBar from '../Home/NavBar/NavBar';
+// import NavBar from '../CommonComponent/NavBar/NavBar';
 import Modal from 'react-modal';
 import PaymentProcess from '../PaymentProcess/PaymentProcess'
+import NavBar from '../CommonComponent/NavBar/NavBar.js';
 
 const customStyles = {
     content: {
@@ -85,7 +86,7 @@ const ServicesSelect = () => {
     return (
         <>
         {loggedInUser && <div className="justify-content-center">
-            <NavBar></NavBar>
+            <NavBar/>
             <div className="container mt-5 row justify-content-center shadow-lg m-auto p-5">
                 <div className="col-md-6">
                     <PaymentProcess handleUserSelectService={handleUserSelectService}/>

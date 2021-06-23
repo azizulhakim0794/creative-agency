@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../Home/NavBar/NavBar';
+import NavBar from '../CommonComponent/NavBar/NavBar.js';
 import './OurTeam.css'
 import customer1 from '../../images/customer-1.png'
 import customer2 from '../../images/customer-2.png'
