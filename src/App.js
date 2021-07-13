@@ -7,6 +7,7 @@ import {
 import ConnectUs from './Components/ConnectUs/ConnectUs';
 import AddServices from './Components/Dashboard/AddServices/AddServices';
 import AdminList from './Components/Dashboard/AdminList/AdminList';
+import AllUser from './Components/Dashboard/AllUser/AllUser';
 import Dashboard from './Components/Dashboard/Dashboard';
 import MakeAdmin from './Components/Dashboard/MakeAdmin/MakeAdmin';
 import OrderList from './Components/Dashboard/OrderList/OrderList';
@@ -69,6 +70,9 @@ const [nav , setNav] = useState({
           </Route>
           <Route path="/dashboard/addServices">
             <AddServices />
+          </Route>
+          <Route path="/dashboard/allUser">
+            <AllUser />
           </Route>
           <Route path="/dashboard/orderReview/:id">
             <ReviewComment />

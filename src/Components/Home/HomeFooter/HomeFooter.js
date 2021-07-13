@@ -9,7 +9,7 @@ const HomeFooter = () => {
             <Footer/>
             <br/>
             <br/><br/>
-           <p  className="text-center"> <small>Copyright by Tamzid in {new Date().getFullYear()}</small></p>
+           <p  className="text-center"> <small>Copyright by <a href="https://personal-portfolio-74d3d.firebaseapp.com/" target="blank">Tamzid</a> in {new Date().getFullYear()}</small></p>
            <br/>
            
         </div>

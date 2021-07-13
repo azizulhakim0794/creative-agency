@@ -5,6 +5,7 @@ import { UserContext } from '../../App';
 import Modal from 'react-modal';
 import PaymentProcess from '../PaymentProcess/PaymentProcess'
 import NavBar from '../CommonComponent/NavBar/NavBar.js';
+import axios from 'axios';
 
 const customStyles = {
     content: {
@@ -24,19 +25,11 @@ const ServicesSelect = () => {
     const { id } = useParams()
     const history = useHistory()
     useEffect(() => {
-        fetch('https://obscure-castle-94167.herokuapp.com/oneServices/'+id, {
-            method: 'GET'
-        })
-            .then(res => res.json())
-            .then(data => setImageData(data.image.img))
-            .catch(ex => console.error(ex))
-
-        fetch('https://obscure-castle-94167.herokuapp.com/oneServices/'+id, {
-            method: 'GET'
-        })
-            .then(res => res.json())
-            .then(item => setUserData(item))
-            .catch(ex => console.error(ex))
+            axios.get('https://obscure-castle-94167.herokuapp.com/services/'+id)
+            .then(response => setImageData(response.data.image.img))
+            axios.get('https://obscure-castle-94167.herokuapp.com/services/'+id)
+            .then(response => setUserData(response.data))
+             .catch(ex => console.error(ex))
 
     }, [id])
 
@@ -44,11 +37,15 @@ const ServicesSelect = () => {
     const handleUserSelectService = () => {
         const fileData = new FormData()
         fileData.append('email', loggedInUser.email)
-        fileData.append('name', userData.name)
+        fileData.append('userName', loggedInUser.name)
+        fileData.append('userImg', loggedInUser.photo)
+        fileData.append('orderName', userData.name)
         fileData.append('details', userData.details)
-        fileData.append('image', imageData)
+        fileData.append('orderImg', imageData)
+        fileData.append('states', 'Pending')
+        fileData.append('btnColor', 'warning')
         fileData.append('orderTime', new Date().toDateString())
-        fetch('https://obscure-castle-94167.herokuapp.com/addMyOrder', {
+        fetch('https://obscure-castle-94167.herokuapp.com/dashboard/userOrderAdd', {
             method: 'POST',
             header: { 'Content-Type': 'application/json' },
             body: fileData
@@ -80,8 +77,6 @@ const ServicesSelect = () => {
         setIsOpen(false);
         history.push('/home')
     }
-    // const encoded = base64.b64encode(imageData)
-
     const images = "data:image/png;base64,"+imageData
     return (
         <>

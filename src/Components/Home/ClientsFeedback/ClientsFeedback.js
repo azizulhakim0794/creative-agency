@@ -7,7 +7,7 @@ import ClientsComment from './ClientsComment/ClientsComment';
 const ClientsFeedback = () => {
     const [data,setData] = useState([])
     useEffect(()=>{
-        fetch('https://obscure-castle-94167.herokuapp.com/allComment',{
+        fetch('https://obscure-castle-94167.herokuapp.com/reviewComment',{
             method: 'GET',
         })
         .then(res => res.json())

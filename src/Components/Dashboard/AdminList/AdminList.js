@@ -9,15 +9,13 @@ const AdminList = () => {
     const [nav] = useContext(Navigation)
     const [coLeader, setCoLeader] = useState([])
     useEffect(() => {
-        fetch('https://obscure-castle-94167.herokuapp.com/AllCoLeader')
+        fetch('https://obscure-castle-94167.herokuapp.com/coLeader')
             .then(res => res.json())
             .then(data => setCoLeader(data))
     }, [])
-    console.log(coLeader)
     const handleRemoveCoAdmin = (e) => {
         document.getElementById(`removeItem${e}`).style.display = "none";
-        console.log(e)
-        fetch('https://obscure-castle-94167.herokuapp.com/coAdminDelete', {
+        fetch('https://obscure-castle-94167.herokuapp.com/coLeader', {
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ deleteId: e })

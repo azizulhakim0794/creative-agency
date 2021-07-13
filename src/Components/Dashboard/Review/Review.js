@@ -12,7 +12,7 @@ const Review = () => {
     const [order, setOrder] = useState([])
     const [nav] = useContext(Navigation)
     useEffect(() => {
-        fetch('https://obscure-castle-94167.herokuapp.com/myOrder', {
+        fetch('https://obscure-castle-94167.herokuapp.com/dashboard/userOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -41,9 +41,14 @@ const Review = () => {
                                 <h1 className="text-center">Your Review Items</h1><br />
                             </div>
                                 {
-                                    order.length ? (order.map(data => <ReviewItem data={data} handleReview={handleReview} key={data._id} />)) : <Loading />
+                                    order.length ? (order.map(data => <ReviewItem data={data} handleReview={handleReview} key={data._id} />)):<p className="text-center">please order first</p>
                                 }
+                                {/* {
+                                    order.length === 0 && <p className="text-center">please order first</p> && <Loading/>
+                                } */}
                             </div>
+                            
+                            
                             }
                             <PleaseLogin/>
                         </div>

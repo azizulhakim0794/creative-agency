@@ -33,14 +33,14 @@ const AddServices = () => {
         formData.append('name', info.name);
         formData.append('details', info.details);
 
-        fetch('https://obscure-castle-94167.herokuapp.com/addServices', {
+        fetch('https://obscure-castle-94167.herokuapp.com/services', {
             method: 'POST',
             body: formData
         })
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    history.push('/dashboard')
+                    history.push('/home')
                 }
             })
             .catch(error => {

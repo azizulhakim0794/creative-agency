@@ -1,20 +1,16 @@
 import React, {useEffect, useState } from 'react';
 import ServicesForm from './ServicesForm/ServicesForm';
 import './Services.css'
+import axios from 'axios';
 import InlineLoading from '../../CommonComponent/InlineLoading/InlineLoading';
 
 const Services = () => {
     // const [handleData , setHandleData] = useState()
-
-
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('https://obscure-castle-94167.herokuapp.com/allServices',)
-            .then(res => res.json())
-            .then(data => setServices(data))
+        axios.get('https://obscure-castle-94167.herokuapp.com/services')
+            .then(response => setServices(response.data))
     }, [])
-
-
     return (
         <div className="container top-margin">
             <h2 className="text-center">Ous Services</h2>

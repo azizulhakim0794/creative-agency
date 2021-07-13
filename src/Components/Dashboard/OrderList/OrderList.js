@@ -11,7 +11,7 @@ const OrderList = () => {
     const [order, setOrder] = useState([])
     const [nav] = useContext(Navigation)
     useEffect(() => {
-        fetch('https://obscure-castle-94167.herokuapp.com/myOrder', {
+        fetch('https://obscure-castle-94167.herokuapp.com/dashboard/userOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -25,7 +25,7 @@ const OrderList = () => {
     }, [loggedInUser.email, loggedInUser.uid])
     const handleCancel = (e) => {
         document.getElementById(`order${e}`).style.display = "none";
-        fetch('https://obscure-castle-94167.herokuapp.com/orderDelete/', {
+        fetch('https://obscure-castle-94167.herokuapp.com/dashboard/userOrderDelete', {
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ deleteId: e })
@@ -48,7 +48,7 @@ const OrderList = () => {
                             {loggedInUser.isSignedIn && <div>
                                 <h1 className="text-center">Your Order Details</h1><br /><div>
                                     {
-                                        order.length ? (order.map(data => <Orders data={data} handleCancel={handleCancel} key={data._id}></Orders>)) :<Loading />   
+                                        order.length ? (order.map(data => <Orders data={data} handleCancel={handleCancel} key={data._id}></Orders>)) :<p className="text-center">please order first</p>  
                                     }
                                 </div>
                             </div>}

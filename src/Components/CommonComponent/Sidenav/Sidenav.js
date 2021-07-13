@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { faAddressBook, faBars, faCaretSquareLeft, faHome, faNewspaper, faPlus, faShoppingCart, faSignOutAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook, faBars, faCaretSquareLeft, faLuggageCart, faHome, faNewspaper, faPlus, faShoppingCart, faSignOutAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
@@ -21,7 +21,7 @@ const Sidenav = () => {
       .then(data => setAdmin(data))
       .catch(error =>
         console.log(error))
-    fetch('https://obscure-castle-94167.herokuapp.com/findCoLeader', {
+    fetch('https://obscure-castle-94167.herokuapp.com/coLeader', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ email: loggedInUser.email })
@@ -66,6 +66,7 @@ const Sidenav = () => {
               My Order
             </Link>
           </li>
+         
           <li className="nav-item">
             <Link to='/dashboard/reviewItem' className="py-3 nav-link sideNav text-dark ">
               <FontAwesomeIcon className=" mx-2" icon={faNewspaper} />
@@ -73,6 +74,12 @@ const Sidenav = () => {
             </Link>
           </li>
           {admin && <div>
+            <li className="nav-item">
+            <Link to='/dashboard/AllUser' className="py-3 nav-link sideNav text-dark ">
+              <FontAwesomeIcon className=" mx-2" icon={faLuggageCart} />
+              All User Order
+            </Link>
+          </li>
             <li className="nav-item">
               <Link className="nav-link sideNav text-dark py-3" to='/dashboard/addServices'>
                 <FontAwesomeIcon className=" mx-2" icon={faPlus} />
@@ -96,7 +103,14 @@ const Sidenav = () => {
               </Link>
             </li>
           </div>}
-          {coAdmin && <div><li className="nav-item">
+          {coAdmin && <div>
+            <li className="nav-item">
+            <Link to='/dashboard/allUser' className="py-3 nav-link sideNav text-dark ">
+              <FontAwesomeIcon className=" mx-2" icon={faLuggageCart} />
+              All User Order
+            </Link>
+          </li>
+            <li className="nav-item">
             <Link className="nav-link sideNav text-dark py-3" to='/dashboard/adminList'>
               <FontAwesomeIcon className=" mx-2" icon={faAddressBook} />
               <span>Admin List</span>

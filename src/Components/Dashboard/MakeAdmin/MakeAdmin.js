@@ -17,7 +17,7 @@ const MakeAdmin = () => {
         setInfo(newInfo)
     }
     const handleAdmin = (e)=>{
-        fetch('https://obscure-castle-94167.herokuapp.com/makeAdmin',{
+        fetch('https://obscure-castle-94167.herokuapp.com/coLeader/makeAdmin',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body: JSON.stringify({email:info.email, name:info.name})
