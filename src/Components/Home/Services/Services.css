@@ -4,10 +4,17 @@ img.card-img-top-round {
     margin: auto;
 }
 .card-hover:hover{
-    /* border: 1px ! important; */
     cursor: pointer;
     box-shadow: 2px 2px  10px  2px gray;
-}
-.col-md-4.col-sm-6.card-hover:hover {
+    transition: 0.3s;
     
 }
+.service-card:hover{
+    position: relative;
+    animation: mymove .5s 1;
+}
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 10px;}
+     75%  {top: 0px}
+  }

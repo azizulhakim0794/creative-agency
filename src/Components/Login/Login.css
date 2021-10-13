@@ -1,7 +1,9 @@
 img.col-md-4.google-icon {
     width: 10%;
     height: 100%;
-
+}
+.login-img {
+    height: 70px;
 }
 span.border.google-formate {
     border-radius: 30px;

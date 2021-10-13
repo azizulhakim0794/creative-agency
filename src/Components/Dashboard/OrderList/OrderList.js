@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Navigation, UserContext } from '../../../App';
 import Orders from './Orders';
 import './OrderList.css'
-import Loading from '../../CommonComponent/Loading/Loading';
 import Sidenav from '../../CommonComponent/Sidenav/Sidenav';
 import PleaseLogin from '../../CommonComponent/PleaseLogin/PleaseLogin';
 

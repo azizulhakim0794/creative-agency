@@ -1,25 +1,27 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState,Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import ConnectUs from './Components/ConnectUs/ConnectUs';
-import AddServices from './Components/Dashboard/AddServices/AddServices';
-import AdminList from './Components/Dashboard/AdminList/AdminList';
-import AllUser from './Components/Dashboard/AllUser/AllUser';
-import Dashboard from './Components/Dashboard/Dashboard';
-import MakeAdmin from './Components/Dashboard/MakeAdmin/MakeAdmin';
-import OrderList from './Components/Dashboard/OrderList/OrderList';
-import Review from './Components/Dashboard/Review/Review';
-import ReviewComment from './Components/Dashboard/Review/ReviewComment/ReviewComment';
-import Home from "./Components/Home/Home";
-import Login from "./Components/Login/Login";
-import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
-import NoMatch from './Components/NoMatch/NoMatch';
-import OurTeam from './Components/OurTeam/OurTeam';
-import ServicesSelect from './Components/ServicesSelect/ServicesSelect';
-import WebOverview from './Components/WebOverview/WebOverview';
+import Loading from './Components/CommonComponent/Loading/Loading';
+const ConnectUs = React.lazy(()=> import('./Components/ConnectUs/ConnectUs'))
+const AddServices = React.lazy(()=> import('./Components/Dashboard/AddServices/AddServices'))
+const AdminList = React.lazy(()=> import('./Components/Dashboard/AdminList/AdminList'))
+const AllUser = React.lazy(()=> import('./Components/Dashboard/AllUser/AllUser'))
+const Dashboard = React.lazy(()=> import('./Components/Dashboard/Dashboard'))
+const MakeAdmin = React.lazy(()=> import('./Components/Dashboard/MakeAdmin/MakeAdmin'))
+const OrderList = React.lazy(()=> import('./Components/Dashboard/OrderList/OrderList'))
+const Home = React.lazy(()=> import('./Components/Home/Home'))
+const Review = React.lazy(()=> import('./Components/Dashboard/Review/Review'))
+const ReviewComment = React.lazy(()=> import('./Components/Dashboard/Review/ReviewComment/ReviewComment'))
+const Login = React.lazy(()=> import('./Components/Login/Login'))
+const NoMatch = React.lazy(()=> import('./Components/NoMatch/NoMatch'))
+const PrivateRoute = React.lazy(()=> import('./Components/Login/PrivateRoute/PrivateRoute'))
+const OurTeam = React.lazy(()=> import('./Components/OurTeam/OurTeam'))
+const ServicesSelect = React.lazy(()=> import('./Components/ServicesSelect/ServicesSelect'))
+const WebOverview = React.lazy(()=> import('./Components/WebOverview/WebOverview'))
+
 export const UserContext = createContext()
 export const Navigation = createContext()
 function App() {
@@ -52,6 +54,8 @@ const [nav , setNav] = useState({
   })
 
   return (
+    
+    <Suspense fallback={<Loading/>}>
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Navigation.Provider value={[nav , setNav]}>
       <Router>
@@ -108,6 +112,7 @@ const [nav , setNav] = useState({
       </Router>
       </Navigation.Provider>
     </UserContext.Provider>
+    </Suspense>
 
   );
 }

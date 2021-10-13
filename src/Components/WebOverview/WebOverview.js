@@ -17,27 +17,27 @@ const WebOverview = () => {
                 </p>
                 <div className="mt-5">
                     <p><b>1. First to get Service you have to login first</b></p>
-                    <img src={login} alt="login" />
+                    <img src={login} className="img-fluid" alt="login" />
                 </div>
                 <div className="mt-5">
                     <p><b>2. then choose your service that what you need</b></p>
-                    <img src={service1} alt="service1" />
+                    <img src={service1} className="img-fluid" alt="service1" />
                 </div>
                 <div className="mt-5">
                     <p><b>3. Then try this code 4242-4242-4242-4242 to buy your service and date must be a future date</b></p>
-                    <img src={buyAService} alt="buyAService" />
+                    <img src={buyAService} className="img-fluid" alt="buyAService" />
                 </div>
                 <div className="mt-5">
                     <p><b>4.The special things is if you are buy a product you can also share your opinion about this product from your dashboard.</b></p>
                     
                     <div className="row">
-                        <div className="col-md-6"><img src={dashboard} alt="dashboard" /></div>
-                        <div className="col-md-6"><img src={review} alt="review" /></div>
+                        <div className="col-md-6"><img src={dashboard} className="img-fluid" alt="dashboard" /></div>
+                        <div className="col-md-6"><img src={review} className="img-fluid" alt="review" /></div>
                     </div>
                 </div>
                 <div className="mt-5">
                     <p><b>5.The main thing of this website is here is an admin who can control all over the website and he can also set a co-leader for the website and remove him at any time. The Leaders can Add any service and also can remove it, the co-leader is also can do this.</b></p>
-                    <img src={dashboard2} alt="dashboard2" />
+                    <img src={dashboard2} className="img-fluid" alt="dashboard2" />
                 </div>
                 
             </div>

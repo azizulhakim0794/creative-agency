@@ -4,7 +4,6 @@ import { Navigation, UserContext } from '../../../App';
 import ReviewItem from './ReviewItem/ReviewItem';
 import { useHistory } from 'react-router';
 import Sidenav from '../../CommonComponent/Sidenav/Sidenav';
-import Loading from '../../CommonComponent/Loading/Loading';
 import PleaseLogin from '../../CommonComponent/PleaseLogin/PleaseLogin';
 
 const Review = () => {

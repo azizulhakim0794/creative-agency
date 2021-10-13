@@ -1,4 +1,4 @@
-import React, { useContext , useEffect} from 'react';
+import React, { useContext} from 'react';
 import './Login.css'
 import "firebase/auth";
 import firebase from 'firebase/app';
@@ -43,10 +43,9 @@ const Login = () => {
                 isSignedInGoogle.email= email
                 isSignedInGoogle.photo= photoURL
                 isSignedInGoogle.uid= uid
-                
                 setLoggedInUser(isSignedInGoogle)
-                
                 storeAuthToken()
+                history.replace(from);
 
             })
             .catch((error) => {
@@ -63,15 +62,15 @@ const Login = () => {
                 }
             });
     }
-    useEffect(()=>{   
-        if (loggedInUser.isSignedIn) {
-            history.replace(from);
-          }
-    },[loggedInUser.isSignedIn])
+    // useEffect(()=>{   
+    //     if (loggedInUser.isSignedIn) {
+            
+    //       }
+    // },[loggedInUser.isSignedIn])
     return (
         <div className="container">
             <p className="text-center mt-5">
-                <img className="navbar-img" src={logo} alt="" />
+                <img className="img-fluid login-img " src={logo} alt="" />
             </p>
             <div className="d-flex justify-content-center mt-5">
                 <div className="card col-md-4 col-sm-12 col-xs-12">
