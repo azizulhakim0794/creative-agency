@@ -3,11 +3,12 @@ import './NavBar.css'
 import { Link } from "react-router-dom";
 import brand from '../../../images/logos/logo.png'
 import { UserContext } from '../../../App';
-const NavBar = ({ handleNavbar }) => {
+const NavBar = () => {
     const [loggedInUser] = useContext(UserContext)
+    // onClick={handleNavbar}
     return (
         <nav className="container-fluid navbar navbar-expand-lg navbar-light">
-            <button className="navbar-toggler" onClick={handleNavbar} type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded={'false'} aria-label="Toggle navigation">
+            <button className="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded={'false'} aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <img className="navbar-img" src={brand} alt="brand" />

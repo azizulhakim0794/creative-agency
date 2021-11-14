@@ -1,23 +1,45 @@
 .home-header-bg{
 width: 100%;
 background: #FBD062;
+clip-path:polygon(0 0,100% 0,100% 100%,70% 87%,0 100%);
 }
-.main-588{
-    height: 593px;
+/* home header */
+.top-margin {
+    margin-top: 100px;
 }
-.main-774{
-    height: 774px;
+.headerImg{
+    z-index: 2;
 }
-.main-bg{
-    background: #FBD062;
-}
-.main-text{
-    background: #fbd062
-}
-@media only screen and (max-width: 400px){
-.home-header-bg {
+/* home footer */
+input.form-control-lg {
     width: 100%;
+}
+.full-footer {
     background: #FBD062;
-    height: 646px;
 }
+/* clients feedback */
+img.comment-img {
+    width: 108px;
+    height: 108px;
 }
+.round-img {
+    border-radius: 50%;
+    width: 70%;
+    margin-left: 13%;
+    margin-top: 12%;
+}
+/* Carousels */
+.carousel {
+    background: #111430;
+}
+.container.carousel-margin {
+    height: 400px;
+}
+.mLeft-5 {
+    margin-left: 26%;
+}
+/* brand */
+img.brands-img {
+    width: 161px;
+    height: 51px;
+    }

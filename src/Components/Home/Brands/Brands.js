@@ -1,5 +1,4 @@
 import React from 'react';
-import './Brands.css'
 import airbnb from '../../../images/logos/airbnb.png'
 import google from '../../../images/logos/google.png'
 import netflix from '../../../images/logos/netflix.png'

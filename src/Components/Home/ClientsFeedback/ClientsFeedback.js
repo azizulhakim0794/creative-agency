@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import  './ClientsFeedback.css'
-
 import ClientsComment from './ClientsComment/ClientsComment';
-
-
 const ClientsFeedback = () => {
     const [data,setData] = useState([])
     useEffect(()=>{
@@ -13,7 +9,6 @@ const ClientsFeedback = () => {
         .then(res => res.json())
         .then(data =>setData(data))
     },[])
-    // console.log(data)
     return (
         <div className="container mt-5">
             <h2 className="text-center">Clients <span className="text-success">Feedback</span></h2>
