@@ -7,7 +7,7 @@ const HomeFooter = () => {
             <Footer/>
             <br/>
             <br/><br/>
-           <p  className="text-center"> <small>Copyright by <a href="https://azizulhakim.netlify.app" target="blank">Tamzid</a> in {new Date().getFullYear()}</small></p>
+           <p  className="text-center"> <small>Copyright by <a href="https://azizul-hakim01.firebaseapp.com/" target="blank">Tamzid</a> in {new Date().getFullYear()}</small></p>
            <br/>
            
         </div>
